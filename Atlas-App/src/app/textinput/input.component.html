@@ -1,0 +1,15 @@
+
+<!-- "for loop"  is used to create dynamic form  -->
+
+<form class="my-form" #myform="ngForm" (ngSubmit)="set()">
+   <div *ngFor="let msg of childMessage let i=index">      
+     <p> <mat-form-field class="full-width"  >
+       <mat-label>{{msg.label}}</mat-label>
+         <input  type="msg.type" matInput  [(ngModel)]="childMessage[i].value" name="fname"  required>
+       </mat-form-field></p>
+   </div>
+   <button mat-raised-button color="primary">Login</button>
+</form>       
+                               
+                    
+                
