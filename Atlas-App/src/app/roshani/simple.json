@@ -1,0 +1,11 @@
+{
+"Product_name":"xiomi",
+"model_no":"noteseven",
+"camera":20,
+"RAM":6,
+"screen_size":6,
+"colors":[{"black":"available",
+    "white":"available"}],
+ "description":"good product with lots of new features",
+ "android_version":9.1   
+}

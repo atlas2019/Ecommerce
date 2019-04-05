@@ -1,0 +1,69 @@
+<mat-card [class.mat-elevation-z15]="!isActive">
+    <mat-grid-list cols="2">
+        <mat-grid-tile>
+
+        <div class="image"  >
+            <img mat-card image="black" src="assets/note2.PNG" alt="">         
+           </div>
+          </mat-grid-tile>
+    
+        <mat-grid-tile class="list">
+        <div class="text" [style.overflow]="'auto'" [style.height.px]="'500'">
+            
+         
+                
+             <label [style.color]="'blue'">PRODUCT NAME:</label>
+        <p><i>
+            {{temps.Product_name}}
+          </i>
+          
+          </p>
+          <label [style.color]="'29dca5'">MODEL No:</label> 
+        <p>
+           {{temps.model_no}}
+          </p>
+          
+          <p><label [style.color]="'red'" mat display4>Specifications:</label></p>
+          <label [style.color]="'skyblue'">Camera:</label>
+         <p>
+           {{temps.camera}}Pixel
+          </p>
+          <label [style.color]="'skyblue'">RAM:</label>
+         <p>
+           {{temps.RAM}}GB
+          </p>
+          <label [style.color]="'skyblue'">Screen Size:</label>
+         <p>
+           {{temps.screen_size}}Inches
+          </p>
+          <p><label [style.color]="'blue'">COLORS:</label>
+            <mat-radio-group>
+              
+              <p><mat-radio-button type="radio" active>RED</mat-radio-button></p>
+            <p> <mat-radio-button>BLACK</mat-radio-button></p>
+            </mat-radio-group>
+          </p>
+          <label [style.color]="'red'">Summery:</label>
+         <p>
+           {{temps.description}}
+          </p>
+          <label [style.color]="'blue'">Android Version:</label>
+         <p>
+           {{temps.android_version}}
+         </p>   
+         
+            </div>
+            
+          </mat-grid-tile>
+          
+          
+    <!-- </mat-drawer-content> -->
+
+  </mat-grid-list>
+  <mat-card-actions>
+      <button mat-raised-button  (click)="checkout()"color="primary">Buy Now</button>
+      <button mat-raised-button (click)="next()" color="primary">Add to cart</button>
+   </mat-card-actions> 
+  
+    <!-- </mat-drawer-container> -->
+</mat-card>
