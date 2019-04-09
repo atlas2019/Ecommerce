@@ -1,0 +1,60 @@
+
+
+.login-main{
+  margin-right: 80%;
+  margin-left:5%;
+  margin-bottom: 10%;
+  width: 80%;
+  
+  max-block-size: 80%;
+  min-width: 40%;
+  resize:80%
+}
+
+  .display{
+    align-content: auto;
+    word-spacing: 10%;
+    margin-top: 7%;
+    margin-right:10%;
+  }
+
+  mat-card{
+  height:80%;
+  width: 80%;
+  min-height: 80%;
+  min-width: 70%;
+  margin-left:5%;
+  margin-right:5%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  border: darkblue;
+  position: relative;
+  }
+  .list {
+    flex-grow: 1; 
+    border: 1px solid green;
+    overflow: auto;
+}
+  .image{
+  width: 400px;
+  height: 70%;
+  margin: 10px;
+  border: 1px thin teal;
+  image-resolution: 50%;
+    /* margin-left:10%;
+    padding:20%;
+    margin-top:20%;
+    margin-right: 0%;
+    position: relative;
+    min-width: 90%;
+    min-height: 50%;
+     */
+  }
+  .text{
+    min-height:70%;
+    margin-top:3%;
+    margin-left: 20%;
+    margin-right: 0%;
+    position: relative;
+    min-width: 90%;
+  }

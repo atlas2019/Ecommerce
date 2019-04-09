@@ -1,0 +1,79 @@
+<mat-card [class.mat-elevation-z15]="!isActive">
+  <mat-grid-list cols="2">
+      <mat-grid-tile>
+
+      <div class="image"  >
+          <img mat-card image="black" src="{{childMessage.img}}" alt="">         
+         </div>
+        </mat-grid-tile>
+  
+      <mat-grid-tile class="list">
+      <div class="text" [style.overflow]="'auto'" [style.height.px]="'300'">
+          
+       
+              
+           <label class="mat-h2"><b>MODEL NAME:</b></label>
+      <p><i>
+          {{childMessage.modelname}}
+        </i>
+        
+        </p>
+        <label class="mat-h2">BRAND:</label> 
+      <p>
+         {{childMessage.brand}}
+        </p>
+        <label class="mat-h2">CATEGORY</label>
+        <P>{{childMessage.Category}}</P>
+        <label class="mat-h2">PRICE:</label>
+        <P>{{childMessage.mobileprice}}</P>
+        <label class="mat-h2">RAM:</label>
+        <P>{{childMessage.ram}}GB</P>
+        <label class="mat-h2">STORAGE</label>
+        <P>{{childMessage.storage}}</P>
+        <!-- <p><label class="mat-h2">CAMERA SPECIFICATION</label></p> -->
+        <label class="mat-h2">Camera:</label>
+       <p>
+         <label>FrontCamera:</label>
+         {{childMessage.camspec.frontcam}}Pixel
+         <label>RearCamera:</label>
+         {{childMessage.camspec.rearcam}}Pixel
+        </p>
+        <label class="mat-h2">DIMENSIONS:</label>
+       <p>
+         {{childMessage.mobdim.thickness}}cm
+        </p>
+        <p>
+          {{childMessage.mobdim.weight}}gm
+         </p>
+         <p>
+          {{childMessage.mobdim.screensize}}inches
+         </p>
+        <label class="mat-h2">HIGHLIGHTS:</label>
+       <p>
+         {{childMessage.highlig.line1}}
+        </p>
+        <p>
+          {{childMessage.highlig.line2}}
+         </p>
+        <p><label class="mat-h2">COLORS:</label>
+          <mat-radio-group>
+            
+            <p><mat-radio-button type="radio">BLUE</mat-radio-button></p>
+          <p> <mat-radio-button>BLACK</mat-radio-button></p>
+          </mat-radio-group>
+        </p>         
+          </div>
+          
+        </mat-grid-tile>
+        
+        
+  <!-- </mat-drawer-content> -->
+
+</mat-grid-list>
+<mat-card-actions>
+    <button mat-raised-button  (click)="checkout()"color="primary">Buy Now</button>
+    <button mat-raised-button (click)="next()" color="primary">Add to cart</button>
+ </mat-card-actions> 
+
+  <!-- </mat-drawer-container> -->
+</mat-card>

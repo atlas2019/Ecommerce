@@ -1,0 +1,41 @@
+<div *ngIf="show">
+<div *ngFor="let obj of ret">
+ <div class="cardlist" fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
+   
+ <mat-card class="my-card" [class.mat-elevation-z15]="!isActive" (click)="foo(obj)">
+    
+          <mat-card-header>
+           <mat-card-title>Mobiles</mat-card-title>   
+          </mat-card-header>
+         
+        <mat-grid-list cols="3" rowHeight="100%" gutterSize="20px">
+         
+          <mat-grid-tile >   
+         <div class="picture">  
+         <img mat-card-image src="{{obj.img}}" alt="photo of Samsung-Galaxy-A30-2-1024x576" layout=fill> 
+         </div>
+          </mat-grid-tile>
+          
+           <mat-grid-tile class="text">
+        <mat-card-content>
+          <label><b>Summary:</b></label> 
+         <label><b>Model Name:</b></label>
+         <p>{{obj.modelname}}</p>
+         <label><b>Price:</b></label>
+         <p>{{obj.mobileprice}}</p>
+         <label><b>RAM:</b></label>
+         <p>{{obj.ram}}</p>
+         <label><b>Storage:</b></label>
+         <p>{{obj.storage}}</p>
+        </mat-card-content> 
+       </mat-grid-tile>
+      
+    </mat-grid-list> 
+      </mat-card>
+</div>   
+</div>
+</div>
+<div *ngIf="!show">
+<ex-root [childMessage]="result"></ex-root>
+</div>
+
