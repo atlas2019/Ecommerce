@@ -10,14 +10,13 @@ import org.json.JSONObject;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import databasehandler.mongoint;
+import databasehandler.MongoInterface;
 
-
-public class mongohandler {
-	public MongoCollection<Document> getCollection() {
+public class MongoDbConnect {
+	public MongoCollection<Document> getCollection(String collectionName) {
 	MongoClient mongoClient = new MongoClient();
 	MongoDatabase database = mongoClient.getDatabase("Account");
-	MongoCollection<Document> coll = database.getCollection("Test");
+	MongoCollection<Document> coll = database.getCollection(collectionName);
 	return coll;
 }
 }

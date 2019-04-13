@@ -1,4 +1,7 @@
-package accountmanager;
+package user;
+import order.Order;
+import user.UserMangerInterface;
+import utility.CommonRandomNum;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,16 +9,19 @@ import java.util.List;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.google.gson.Gson;
+
 import databasehandler.MongodbHandler;
-import accountmanager.authentic;
 
 
-public class accountmanage implements authentic{
+public class UserManger implements UserMangerInterface{
 	@Override
 	public int create(String data) throws JSONException {
 		MongodbHandler op = new MongodbHandler();
+		 JSONObject inputJson=new JSONObject(data);
+		 inputJson.put("userid", CommonRandomNum.createRandomNumber());
 		int i = 0;
-			i = op.insert(new JSONObject(data));
+			i = op.insert(inputJson,"Test");
 
 		return i;
 	}
@@ -26,18 +32,21 @@ public class accountmanage implements authentic{
 			JSONObject jsonData = new JSONObject(data);
 			JSONObject updateData = (JSONObject) jsonData.get("data");
 			JSONObject filterData = (JSONObject) jsonData.get("filter");
-			i = op.update(updateData, filterData);
+			i = op.update(updateData, filterData,"Test");
 		return i;
 
 	}
 	@Override
-	public int retrieve(String data) throws JSONException {
+	public List<UserRegistration> retrieve(String data) throws JSONException {
 		MongodbHandler op = new MongodbHandler();
 		List<String> userdata = new ArrayList<String>();
-		//List<user> users = new ArrayList<user>();
-		userdata = op.retrieve(new JSONObject(data));
-
-		return userdata.size();
+		userdata = op.retrieve(new JSONObject(data),"Test");
+		List<UserRegistration> userinfo=new ArrayList<UserRegistration>();
+		Gson gson=new Gson();
+				for(String i:userdata) {
+			userinfo.add(gson.fromJson(i, UserRegistration.class));
+		}
+		return userinfo;
 	
 	}
 

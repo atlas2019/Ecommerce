@@ -1,9 +1,9 @@
-package accountmanager;
+package user;
 
-public class Authentication {
+public class UserLogin {
 	String username;
 	String password;
-	Authentication(String username,String password){
+	UserLogin(String username,String password){
 		this.username=username;
 		this.password=password;
 	}
