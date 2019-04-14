@@ -1,0 +1,154 @@
+<!-- 1.Order Summary -->
+<mat-card class="main">
+    <mat-icon matSuffix>looks_one</mat-icon><b> Order Summary</b>
+<div class="order">  
+    <div *ngFor="let obj of cartres">
+<mat-card>
+  <div class="picture">  
+    <img mat-card-image src="{{obj.product[0].img}}">
+    </div>
+    <div class="details">
+    <mat-card-content>
+        <p><label><b>Product Name:</b></label>{{obj.product[0].modelname}}</p> 
+  <p><label><b>Description:</b></label>{{obj.product[0].highlig.line1}}</p> 
+  <p>{{obj.product[0].highlig.line2}}</p> 
+  <p><label><b>Price:</b></label>{{obj.product[0].mobileprice}}</p>
+  <!-- <p><label><b>Expected Delivery Date:</b></label>{{obj.ExpectedDate}}</p> -->
+    </mat-card-content>
+  </div>
+</mat-card>
+</div>
+</div>
+</mat-card>
+
+<!-- 2.Delivery Address -->
+<div class="deliveryadd">
+                <mat-accordion>
+                        <mat-expansion-panel>
+                          <mat-expansion-panel-header> 
+                             <mat-panel-title>
+                                  <mat-icon matSuffix>looks_two</mat-icon>
+                                 <b> Delivery address</b>
+                                 <mat-icon matSuffix>local_shipping</mat-icon>
+                            </mat-panel-title> 
+                          </mat-expansion-panel-header>
+
+                          <!-- <mat-step [stepControl]="secondFormGroup">
+                              <form [formGroup]="secondFormGroup">
+                                <mat-form-field>
+                                  <input formControlName="secondCtrl" required>
+                                </mat-form-field> -->
+
+                              <!-- For name -->
+                              <p>
+                                  <mat-form-field appearance="fill">
+                                    <mat-label>Enter Name</mat-label>
+                                    <input matInput placeholder="Name" required  [(ngModel)]="Name"> 
+                                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                                  </mat-form-field>
+                                </p>
+
+                                <!-- For cellnumber -->
+                            
+                                  <mat-form-field appearance="fill">
+                                      <mat-label>Enter Phone_Number</mat-label>
+                                       <input matInput placeholder="Mobile number" required [(ngModel)]="MobileNo">
+                                       <!-- <p>{{mobile_no}}</p> -->
+                                      <mat-icon matSuffix>phone</mat-icon>
+                                    </mat-form-field>
+                              
+
+                                 <!-- zipcode -->
+
+                                 <p>
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Enter ZipCode</mat-label>
+                                         <input matInput placeholder="Zip-Code" required [(ngModel)]="ZipCode">
+                                         <!-- <p>{{zipcode}}</p> -->
+                                        <mat-icon matSuffix>zipcode</mat-icon>
+                                      </mat-form-field>
+                                    </p>
+                         
+                                  <!-- locality -->
+
+                                  <p>
+                                      <mat-form-field appearance="outline">
+                                          <mat-label>Enter Locality</mat-label>
+                                           <input matInput placeholder="Locality" required [(ngModel)]="Locality">
+                                           <!-- <p>{{locality}}</p> -->
+                                          <mat-icon matSuffix>add_location</mat-icon>
+                                        </mat-form-field>
+                                      </p>
+ 
+                                  <!--Address  -->
+                                  <p>
+                                      <mat-form-field appearance="outline">
+                                          <mat-label>Address</mat-label>
+                                           <textarea matInput placeholder="Address" [(ngModel)]="Address"></textarea>
+                                           <!-- <p>{{address}}</p> -->
+                                          <mat-icon matSuffix></mat-icon>
+                                        </mat-form-field>
+                                      </p>
+ 
+                                      <!-- City -->
+                                      <p>
+                                          <mat-form-field appearance="outline">
+                                              <mat-label>City/Town</mat-label>
+                                               <input matInput placeholder="City/Town" required [(ngModel)]="City">
+                                               <!-- <p>{{city}}</p> -->
+                                              <mat-icon matSuffix>location_city</mat-icon>
+                                            </mat-form-field>
+                                          </p>
+
+                                     <!-- State -->
+                                     <p>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Select State</mat-label>
+                                                <select matNativeControl required [(ngModel)]="State">
+                                                  <option value="Karnataka">Karnataka</option>
+                                                  <option value="Maharashtra">Maharashtra</option>
+                                                  <option value="Goa">Goa</option>
+                                                  <option value="Andra-Pradesh">Andra-Pradesh</option>
+                                                  <option value="Tamil-Nadu">Tamil-Nadu</option>
+                                                  <option value="Kerela">Kerala</option>
+                                                  <option value="Telangana">Telangana</option>
+                                                  <option value="Arunachal-Pradesh">Arunachal-Pradesh</option>
+                                                  <option value="Madhya-Pradesh">Madhya-Pradesh</option>
+                                                  <option value="Punjab">Punjab</option>
+                                                  <option value="Madhya-Pradesh">Madhya-Pradesh</option>
+                                                  <option value="Orrisa">Orrisa</option>
+                                                  <option value="Rajsthan">Rajsthan</option>
+                                                </select>  
+                                                <!-- <p>{{state}}</p> -->
+                                          </mat-form-field>
+                                        </p>
+                        </mat-expansion-panel>
+                        </mat-accordion>
+
+
+<!--3. Payment Options -->
+<div class="Payment">
+
+    <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header> 
+             <mat-panel-title> 
+                <mat-icon matSuffix>looks_3</mat-icon>
+               <b> Payment Options</b>
+               <mat-icon matSuffix> payment</mat-icon>
+            </mat-panel-title> 
+          </mat-expansion-panel-header>
+          <!-- Options -->
+          <mat-radio-group aria-label="Select an option">
+             <p><mat-radio-button value="Card" disabled>Credit Card/Debit Card/ATM Card</mat-radio-button></p> 
+             <p><mat-radio-button value="online" disabled> Phone-Pe / BHIM UPI</mat-radio-button></p> 
+             <p><mat-radio-button value="net-bank" disabled>Net-Banking</mat-radio-button></p> 
+             <p><mat-radio-button value="cod" checked >CashOnDelivery</mat-radio-button></p> 
+            </mat-radio-group>
+            <!-- <p>{{cod}}</p> -->
+            <li>
+            <button mat-raised-button (click)="order()">Confirm Order</button>
+          </li>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>

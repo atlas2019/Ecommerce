@@ -1,4 +1,56 @@
 .spacer {
     flex: 1 1 auto;
   }
+    .footer
+   {
+    width:100%;
+    position: fixed;
+    text-align:center;
+    background:rgb(63, 81, 181); 
+      top: 90%;
+      left: 0;
+      right: 0;
+      bottom:0;
+      height:10%;
+  } 
+
+  .cart{
+    height: 10%;
+    left:90%;
+  }
+  .header {
+    position: fixed;
+    background:rgb(63, 81, 181); 
+    top: 0%;
+    left: 0;
+    right: 0;
+    height: 11%;
+  }
+   
+   .search {
+      min-width: 50%;
+      max-width: 500%;
+      width: 300%;  
+      margin-right: 200%;
+    }
+    
+    .mat-focused .placeholder {
+      height: 0%;
+      color: rgb(19, 34, 173);
+  }
+      .MyAccount{
+         width:100%;
+         left:680%;
+         top:0%;
+         bottom:40%;
+        position: relative;; 
+        align-self: right;
+    } 
+  
+  .myCART
+  {
+    position: relative;
+    left: 700%;
+    margin-top: -20%;
+  }
   

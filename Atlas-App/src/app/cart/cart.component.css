@@ -1,0 +1,68 @@
+/* mat-card{
+    width: 70%;
+    height:60%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0%;
+    margin-bottom: 8%;
+    border: darkblue;
+    position: fixed;
+} */
+.title1{
+    position:top;
+    image-resolution: -80%;
+    width: 50%;
+}
+.card{
+    width:50%;
+    height: 50%;
+    border:darkblue;
+   /*min-height:20%;*/
+}
+.cal{
+    width:70%;
+height: 50%
+}
+.deladd
+{
+  height:10%;
+  width:100%; 
+  margin-bottom: 3%; 
+}
+
+.main{
+  height:60%;
+  top:40%;
+  width:98%;
+  /* width:90%;  */
+
+  /* margin-left: 5%;  */
+  margin-right: 2%;
+}
+mat-card{
+  height:70%;
+  width:70%;
+  margin-right:15%;
+  margin-top:2%;
+  margin-bottom:5%;
+  /* margin-top:3%; */
+  border: darkblue;
+  position: relative;
+  }
+
+.details{
+  margin-left:40%;
+  margin-top:-3%;
+  height:50%;
+width: 40%;
+margin-bottom: 40%;
+}
+.picture
+{
+height:10%;
+width:5%;
+margin-top:3%;
+margin-left:10%;
+image-resolution:10%;
+}
+

@@ -1,0 +1,29 @@
+
+<label>MY ACCOUNT> MY ORDERS</label>
+<!-- <div class="cardlist" fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start"> -->
+<!-- <mat-card class="firstcard" [class.mat-elevation-z15]="!isActive"> -->
+
+    <div class="cardlist" fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
+            <div *ngFor="let obj of ret">
+        <mat-card class="my-card" [class.mat-elevation-z15]="!isActive">
+
+            <mat-card-header>
+                <mat-card-title>My Orders ID: 1</mat-card-title>
+            </mat-card-header>
+
+            
+                    <div class="picture">
+                        <img mat-card-image src="{{obj.product[0].img}}" alt="" layout=fill>
+                    </div>
+                    <mat-card-content class="content">
+                        <label><b>Summary:</b></label>
+                         <p><label><b>Model Name:</b></label>{{obj.product[0].modelname}}</p>            
+                        <p><label><b>Price:</b></label>{{obj.product[0].mobileprice}}</p>
+                        <p>Delivered On 19-04-2019</p>
+                       <button>Write product review</button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+<!-- </mat-card>
+</div> -->

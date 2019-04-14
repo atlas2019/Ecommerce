@@ -1,4 +1,4 @@
-<!-- Header with Routing Links is created -->
+<!-- Header with Routing Links is created
 
 <mat-toolbar color="primary">
   <mat-toolbar-row>
@@ -8,4 +8,50 @@
     <a mat-button routerLink="/login">Login</a>
   </mat-toolbar-row>
 </mat-toolbar>
+<mat-card class="footer">
+  <mat-card-footer>
+      <mat-icon matPrefix class="cart">shopping_cart</mat-icon>
+    Ecommerce © 2019 All Rights Reserved</mat-card-footer> -->
+      <!-- <mat-icon matPrefix class="cart"><a href="/">shopping_cart</a></mat-icon> // used at add functionality to mat-icon -->
+      
+<!-- </mat-card> -->
+<mat-toolbar>
+  <!-- header -->
+    <mat-toolbar class="header"></mat-toolbar>
+         <mat-form-field>
+
+             <!-- search bar -->
+            <mat-icon matPrefix class="search">search</mat-icon>
+         <input matInput type="search">
+      <mat-placeholder class="placeholder">Search</mat-placeholder>
+    
+      
+      <!-- giving hint as samsung mobiles to search field -->
+      <mat-hint>Search Mobiles</mat-hint> 
+
+   
+        <!-- Menu -->
+    <div class="MyAccount">
+    <button mat-button [matMenuTriggerFor]="menu">MyAccount</button>
+    <mat-menu #menu="matMenu">
+    <button mat-menu-item>My Profile</button>
+    <button mat-menu-item routerLink="/order">My Orders</button>
+    <button mat-menu-item>Logout</button>
+    </mat-menu>
+  </div>
+  
+   <!-- Cart -->
+   <div class="myCART">
+      <span><a href="/" style="float:right;" routerLink="/cart">myCART</a></span>
+  </div>
+</mat-form-field>
+       
+      
+<!-- footer -->
+   <mat-card class="footer">
+ <mat-card-footer>Ecommerce © 2019 All Rights Reserved</mat-card-footer>
+</mat-card>
+
+</mat-toolbar>
+
 <router-outlet></router-outlet>
