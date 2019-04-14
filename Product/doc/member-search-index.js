@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"productmanager","c":"Camera","l":"Camera()","url":"%3Cinit%3E()"},{"p":"productmanager","c":"Camera","l":"getFrontcam()"},{"p":"productmanager","c":"Camera","l":"getRearcam()"},{"p":"productmanager","c":"Camera","l":"setFrontcam(int)"},{"p":"productmanager","c":"Camera","l":"setRearcam(int)"}]

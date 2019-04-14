@@ -1,6 +1,12 @@
 package productmanager;
 
-public class highlights {
+/**
+ * @author Akshata
+ *
+ */
+
+
+public class Highlights {
 private String line1;
 private String line2;
 public String getLine1() {

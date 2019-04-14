@@ -1,5 +1,4 @@
-package productmanager;
-
+package productmanager; 
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +9,12 @@ import com.mongodb.client.MongoCollection;
 import productmanager.Mongodboperation;
 import productmanager.utility;
 
+/**
+ * @author Akshata
+ *
+ */
+
+// Database Operation
 public class Mongodboperation {
 	int insert(JSONObject data) {
 		utility utility = new utility();

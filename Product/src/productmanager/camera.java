@@ -1,6 +1,10 @@
 package productmanager;
 
-public class camera {
+/**
+ * @author Akshata
+ *
+ */
+public class Camera {
 	private	int frontcam;
 	private	int rearcam;
 	public int getFrontcam() {
@@ -17,3 +21,4 @@ public class camera {
 	}
 
 }
+

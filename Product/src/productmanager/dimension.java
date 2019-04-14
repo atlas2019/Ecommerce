@@ -1,6 +1,10 @@
 package productmanager;
 
-public class dimension {
+/**
+ * @author Akshata
+ *
+ */
+public class Dimension {
 	private	int thickness;
 	private	int weight;
 	private int screensize;
