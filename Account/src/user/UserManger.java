@@ -68,7 +68,12 @@ public class UserManger implements UserMangerInterface{
 		return token;
 	
 	}
-
+	@Override
+	public void delete(String data) throws JSONException {
+		JSONObject seJsonObject=new JSONObject(data);
+		SessionManager.deleteSession(seJsonObject.getString("token"));
+	}
+	
 }
 
 

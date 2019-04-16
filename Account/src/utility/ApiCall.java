@@ -160,6 +160,7 @@ public int	createCart(String data) {
 	
 	return result;
 }
+
 @Path("/delete")
 @POST
 @Consumes(MediaType.APPLICATION_JSON)
@@ -176,6 +177,7 @@ public int deleteStudent(String data) {
 	}
 	return result;
 }
+
 @Path("/fetchCart")
 @POST
 @Consumes(MediaType.APPLICATION_JSON)
@@ -190,6 +192,24 @@ public List<Cartitems>	fetchcart(String data) {
 	
 	return result;
 }
+
+
+@Path("/logout")
+@POST
+@Consumes(MediaType.APPLICATION_JSON)
+@Produces(MediaType.APPLICATION_JSON)
+
+public void	delete(String data) {
+	UserManger m=new UserManger();
+		try {
+			m.delete(data);
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+}
+
+
 }
 
 

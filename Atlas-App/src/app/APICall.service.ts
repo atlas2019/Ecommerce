@@ -17,9 +17,10 @@ export class APICall {
 
       return this.http.post('http://localhost:8080/Account/authenticate',logindisplay);
   }
-//   fetchCart(data){
-//     return this.http.post('http://localhost:8080/Account/fetchCart',data);
-// }
+
+  test(logoutdisplay){
+    return this.http.post('http://localhost:8080/Account/logout',logoutdisplay);
+  }
 
 }
 
