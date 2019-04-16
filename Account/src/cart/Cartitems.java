@@ -3,7 +3,7 @@ package cart;
 import java.sql.Date;
 import java.util.List;
 
-import utility.Product;
+import common.Product;
 
 import java.util.ArrayList;
 

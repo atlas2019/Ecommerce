@@ -36,7 +36,8 @@ export class descriptionComponent {
 
         next(){
           this.addcart={
-            "userid":Number(localStorage.getItem("userid")),
+            //"userid":Number(localStorage.getItem("userid")),
+            "token":Number(localStorage.getItem("token")),
             "product":[this.childMessage]
 
             

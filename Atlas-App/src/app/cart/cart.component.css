@@ -31,7 +31,7 @@ height: 50%
 }
 
 .main{
-  height:60%;
+  height:75%;
   top:40%;
   width:98%;
   /* width:90%;  */
@@ -43,6 +43,7 @@ mat-card{
   height:70%;
   width:70%;
   margin-right:15%;
+  margin-left:5%;
   margin-top:2%;
   margin-bottom:5%;
   /* margin-top:3%; */
@@ -51,18 +52,26 @@ mat-card{
   }
 
 .details{
-  margin-left:40%;
-  margin-top:-3%;
+  margin-left:50%;
+  margin-top:-7%;
   height:50%;
-width: 40%;
+width: 80%;
 margin-bottom: 40%;
 }
 .picture
 {
-height:10%;
-width:5%;
-margin-top:3%;
+height:40%;
+width:25%;
+margin-top:5%;
 margin-left:10%;
 image-resolution:10%;
 }
 
+.card{
+  width:70%;
+  height: 40%;
+}
+.mat{
+  width:70%;
+  height: 50%;
+}

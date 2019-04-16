@@ -2,7 +2,7 @@
 <div fxLayout="row" fxLayoutAlign="center center" class="login-main">
 <mat-card class="my-card" [class.mat-elevation-z20]="!isActive">
       <mat-card-content>
-          <custom-input  (messageEvent)="receivelogindata($event)" [childMessage]="labels"></custom-input>
+          <custom-input  (messageEvent)="receivelogindata($event)" [childMessage]="labels" [action]="actionMessage"></custom-input>
       </mat-card-content>
       <!-- <button mat-raised-button color="primary">Login</button> -->
 </mat-card>

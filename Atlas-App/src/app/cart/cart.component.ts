@@ -23,7 +23,8 @@ export class cartComponent {
   //loads or fetch the cartitems, when the page gets loaded
   ngOnInit(){
      this.cartdisplay={
-     "userid":Number(localStorage.getItem("userid"))
+     //"userid":Number(localStorage.getItem("userid"))
+     "token":Number(localStorage.getItem("token"))
      }
 // this.cartdisplay=this.fetchdisplay;
      //console.log(this.cartdisplay);
@@ -34,5 +35,8 @@ export class cartComponent {
          this.cartres=this.cartres;
         console.log(this.cartres);
         });
+}
+confirm(){
+  this.router.navigate(['/checkout'])
 }
 }

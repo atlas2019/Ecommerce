@@ -15,21 +15,22 @@ import { Router } from "@angular/router";
 export class loginComponent implements OnInit {
   data: any; 
   logindisplay: any={}; //display the username and passsword in console 
-  loginres: any; //for login response [0/1]
+  loginres: any=[]; //for login response [0/1]
+  actionMessage="Login";
 
   //Provides labels for creating forms
 
   labels = [{
     "type": "text",
-    "name": "userName",
-    "label": "Username",
+    "name": "email",
+    "label": "email",
     "value": " ",
     "required": true,
   },
   {
     "type": "text",
     "name": "password",
-    "label": "Password",
+    "label": "password",
     "value": " ",
     "required": true,
   }];
@@ -47,15 +48,16 @@ export class loginComponent implements OnInit {
     this.data = $event;
 
     this.logindisplay = {
-      "username": this.data[0].value.trim(),
+      "email": this.data[0].value.trim(),
       "password": this.data[1].value.trim()
     }
     this.api.authenticate(this.logindisplay).subscribe(data=>{
       this.loginres=data;
       //console.log(this.data);
       //console.log(this.loginres);
-      if (this.loginres > 0) {
-        this.router.navigate(['/project']);
+      if (this.loginres !=null) {
+        localStorage.setItem("token",this.loginres);
+        this.router.navigate(['/product']);
       }
       else {
         this.router.navigate(['/login']);

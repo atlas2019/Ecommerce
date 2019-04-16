@@ -1,25 +1,31 @@
-.deladd
+.deliveryadd
 {
-  height:10%;
-  width:100%; 
-  margin-bottom: 3%; 
+  height:50%;
+  width:80%; 
+  /* margin-top:10%;  */
+  /* position: fixed; */
+  left:50%;
+  top: 0%;
+  margin-left: 5%;
 }
 
 .main{
-  height:60%;
+  height:35%;
   top:40%;
-  width:98%;
+  width:80%;
   /* width:90%;  */
 
   /* margin-left: 5%;  */
   margin-right: 2%;
+  margin-top:5%;
 }
 mat-card{
-  height:22%;
-  width:90%;
-  margin-right:15%;
+  height:23%;
+  width:95%;
+  margin-right:50%;
+  margin-left: 5%;
   margin-top:2%;
-  margin-bottom:5%;
+  margin-bottom:10%;
   /* margin-top:3%; */
   border: darkblue;
   position: relative;
@@ -33,9 +39,17 @@ mat-card{
 }
 .picture
 {
-height:10%;
-width:5%;
+height:12%;
+width:8%;
 margin-top:3%;
 margin-left:10%;
-image-resolution:10%;
+image-resolution:20%;
+}
+.order{
+  width:60%;
+  margin-top: 2%;
+  height: 240%;
+}
+.Payment{
+  margin-bottom: 20%;
 }

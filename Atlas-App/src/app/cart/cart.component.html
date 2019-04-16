@@ -1,38 +1,14 @@
-<!-- <mat-card  [class.mat-elevation-z18]="!isActive" >
-        <div class="text" [style.overflow]="'auto'" [style.height.px]="'300'">
-       <mat-card class="main">
-            <mat-icon matSuffix>looks_one</mat-icon><b> Order Summary</b>
-        <div class="order">  
-            <div *ngFor="let obj of cartres">
-        <mat-card>
-          <div class="picture">  
-            <img mat-card-image src="{{obj.product[0].img}}">
-            </div>
-            <div class="details">
-            <mat-card-content>
-                <p><label><b>Product Name:</b></label>{{obj.product[0].modelname}}</p> 
-          <p><label><b>Ram:</b></label>{{obj.product[0].ram}}</p> 
-          <p><label><b>Storage:</b></label>{{obj.product[0].storage}}GB</p> 
-          <p><label><b>Camera:</b></label>{{obj.product[0].frontcam}}Pixels</p> 
-          <p>{{obj.product[0].product[0].rearcam}}Pixels</p> 
-          <p><label><b>Price:</b></label>{{obj.product[0].mobileprice}}</p>
-          <!-- <p><label><b>Expected Delivery Date:</b></label>{{obj.ExpectedDate}}</p> -->
-            <!-- </mat-card-content>
-          </div>
-        </mat-card>
-        </div>
-        </div>
-        </mat-card> --> 
 
  <div>
     <mat-card  [class.mat-elevation-z18]="!isActive" >
-            <div class="text" [style.overflow]="'auto'" [style.height.px]="'300'">
+            <div class="text" [style.overflow]="'auto'" [style.height.px]="'500'">
      <mat-card-header class="mat-h1">
             <label>cart items:</label>
     </mat-card-header>
+    <div class="mat">
     <mat-grid-list cols="2"> 
         <div *ngFor="let obj of cartres">
-        <mat-card [class.mat-elevation-z15]="!isActive"  >
+        <mat-card [class.mat-elevation-z15]="!isActive"   >
         <!-- <mat-grid-tile class="tile1" > -->
                  <!-- <img mat-card image="black" src="{{obj.product[0].img}}" alt="">   
                  </mat-grid-tile>
@@ -40,7 +16,7 @@
               <div class="card">
                 <mat-grid-tile>  
                 -->
-                <mat-card>
+                
                         <div class="picture">  
                           <img mat-card-image src="{{obj.product[0].img}}">
                           </div>
@@ -54,20 +30,44 @@
                         <mat-tab-group>
                                 <mat-tab label="Item1" *ngFor="let obj of cartres">   -->
                          
-                  <label>ModelName:</label>
-            <p>{{obj.product[0].modelname}}</p>
-            <label>Mobileprice:</label>
-            <p>{{obj.product[0].mobileprice}}</p>
-            <label>RAM:</label>
-            <p>{{obj.product[0].ram}}</p>
-            <label>Storage:</label>
-            <p>{{obj.product[0].storage}}</p>
+                                    <p><label>ModelName:</label> {{obj.product[0].modelname}} </p>
+          
+                                    <p> <label>Mobileprice:</label>{{obj.product[0].mobileprice}}</p>
+           
+                                    <p><label>RAM:</label> {{obj.product[0].ram}}</p>
+           
+                                    <p><label>Storage:</label> {{obj.product[0].storage}}</p>
+          
          <!-- </mat-grid-tile>  -->
                           </mat-card-content>
                                  </div> 
-    
- </mat-card>
 
+                                  <!-- <mat-grid-tile class="tile2" >
+                                    <div class="cal">
+                                                <mat-card [class.mat-elevation-z15]="!isActive"> -
+                                        <p>
+                                            <label> price:</label>
+                                     </p>
+                                     <p>{{obj.product[0].mobileprice}}</p>
+                                        <p>
+                                            <label> Quantity:</label>
+                                          </p>
+                                          <p>{{obj.product[0].quantity}}</p>
+                                        <p>
+                                            <label> Total Price:</label>
+                                          </p>
+                                          <p>{{obj.product[0].mobileprice*obj.product[0].quantity}}</p>
+                                          </mat-card> 
+                                         </div>
+                                     
+                                          
+                                     </mat-grid-tile>   -->
+                                      <mat-card-actions>
+             <button mat-raised-button (click)="confirm()" color="primary">Order Now</button>
+        </mat-card-actions> 
+     
+ </mat-card>
+</div>
         <!-- </mat-grid-tile>   -->
      <!-- <div>
          <mat-grid-tile class="tile2" > 

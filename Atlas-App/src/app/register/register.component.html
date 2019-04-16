@@ -1,7 +1,7 @@
 <div fxLayout="row" fxLayoutAlign="center center" class="login-main">
       <mat-card class="my-card" [class.mat-elevation-z20]="!isActive">
          <mat-card-content>
-             <custom-input  (messageEvent)="receive($event)" [childMessage]="fields"></custom-input>
+             <custom-input  (messageEvent)="receiveregisterdata($event)" [childMessage]="fields" [action]="actionMessage"></custom-input>
          </mat-card-content>
    </mat-card>
 </div>

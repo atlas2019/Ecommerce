@@ -1,3 +1,5 @@
+// authenticate sthe login information
+
 import { Injectable } from "@angular/core";
 import { HttpClient  ,HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -15,6 +17,9 @@ export class APICall {
 
       return this.http.post('http://localhost:8080/Account/authenticate',logindisplay);
   }
+//   fetchCart(data){
+//     return this.http.post('http://localhost:8080/Account/fetchCart',data);
+// }
 
 }
 

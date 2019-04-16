@@ -1,15 +1,12 @@
 <div *ngIf="show">
-<div *ngFor="let obj of ret">
+<div *ngFor="let obj of productres">
  <div class="cardlist" fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
-   
- <mat-card class="my-card" [class.mat-elevation-z15]="!isActive" (click)="foo(obj)">
     
+ <mat-card class="my-card" [class.mat-elevation-z20]="!isActive" (click)="product(obj)">
           <mat-card-header>
            <mat-card-title>Mobiles</mat-card-title>   
           </mat-card-header>
-         
-        <mat-grid-list cols="3" rowHeight="100%" gutterSize="20px">
-         
+        <mat-grid-list cols="2" rowHeight="100%" gutterSize="20px">
           <mat-grid-tile >   
          <div class="picture">  
          <img mat-card-image src="{{obj.img}}" alt="photo of Samsung-Galaxy-A30-2-1024x576" layout=fill> 
@@ -29,10 +26,11 @@
          <p>{{obj.storage}}</p>
         </mat-card-content> 
        </mat-grid-tile>
-      
+     
     </mat-grid-list> 
-      </mat-card>
-</div>   
+      
+ </mat-card>
+</div>
 </div>
 </div>
 <div *ngIf="!show">

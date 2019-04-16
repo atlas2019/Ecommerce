@@ -1,4 +1,6 @@
-<mat-card [class.mat-elevation-z15]="!isActive">
+
+<div>
+<mat-card [class.mat-elevation-z15]="!isActive" >
   <mat-grid-list cols="2">
       <mat-grid-tile>
 
@@ -55,13 +57,13 @@
         <p>
           {{childMessage.highlig.line2}}
          </p>
-        <p><label class="mat-h2">COLORS:</label>
+        <!-- <p><label class="mat-h2">COLORS:</label>
           <mat-radio-group>
             
-            <p><mat-radio-button type="radio">BLUE</mat-radio-button></p>
-          <p> <mat-radio-button>BLACK</mat-radio-button></p>
+            <p><mat-radio-button type="radio" checked>BLUE</mat-radio-button></p>
+          <p> <mat-radio-button disabled>BLACK</mat-radio-button></p>
           </mat-radio-group>
-        </p>         
+        </p>          -->
           </div>
           
         </mat-grid-tile>
@@ -71,9 +73,10 @@
 
 </mat-grid-list>
 <mat-card-actions>
-    <button mat-raised-button  (click)="checkout()"color="primary">Buy Now</button>
+    <button mat-raised-button  (click)="checkout()"color="primary">Checkout</button>
     <button mat-raised-button (click)="next()" color="primary">Add to cart</button>
  </mat-card-actions> 
 
   <!-- </mat-drawer-container> -->
 </mat-card>
+</div>

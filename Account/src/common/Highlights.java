@@ -1,4 +1,4 @@
-package utility;
+package common;
 
 public class Highlights {
 private String line1;

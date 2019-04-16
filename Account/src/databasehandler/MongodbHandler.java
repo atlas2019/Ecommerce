@@ -7,6 +7,7 @@ import org.bson.conversions.Bson;
 import org.json.JSONObject;
 
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.result.DeleteResult;
 
 import utility.MongoDbConnect;
 
@@ -23,6 +24,7 @@ public class MongodbHandler implements MongoInterface {
 		col.insertOne(doc);
 		return 1;
 	}
+	
 @Override /*update function used to update the existing data in to database*/
 	public int update(JSONObject data, JSONObject filter,String collectionName) {
 		MongoDbConnect utility = new MongoDbConnect();
@@ -51,7 +53,7 @@ public int delete(JSONObject data,String collectionName) {
 	MongoDbConnect utility = new MongoDbConnect();
 	MongoCollection<Document> col = utility.getCollection(collectionName);
 	Bson filter = Document.parse(data.toString());
-	col.deleteMany(filter);
+	DeleteResult del=col.deleteMany(filter);
 	return 1;
 }
 }

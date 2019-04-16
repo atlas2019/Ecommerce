@@ -1,3 +1,5 @@
+// retrives the product information
+
 import { Injectable } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -13,7 +15,7 @@ export class user {
   authenticate(productdisplay){
   
 
-    return this.http.post('http://localhost:8080/Product/retrieve',this.data);
+    return this.http.post('http://localhost:8080/Account/fetchproduct',this.data);
 }
  
   }

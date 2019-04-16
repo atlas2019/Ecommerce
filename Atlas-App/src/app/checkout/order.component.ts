@@ -23,7 +23,8 @@ export class orderComponent implements OnInit
     
    ngOnInit(){
      this.orderdisplay={
-       "userid":Number(localStorage.getItem("userid")),
+       //"userid":Number(localStorage.getItem("userid")),
+       "token":Number(localStorage.getItem("token")),
      }
     console.log("In order Component");
     this.api.authenticate(this.orderdisplay).subscribe(data=>{

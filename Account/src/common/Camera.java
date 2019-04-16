@@ -1,4 +1,4 @@
-package utility;
+package common;
 
 public class Camera {
 	private	int frontcam;

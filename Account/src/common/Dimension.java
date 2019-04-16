@@ -1,4 +1,4 @@
-package utility;
+package common;
 
 public class Dimension {
 	private	int thickness;

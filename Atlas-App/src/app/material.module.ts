@@ -3,12 +3,12 @@
 
 import { NgModule } from  '@angular/core';
 import { FormsModule} from '@angular/forms';
-import {MatButtonModule,MatToolbarModule,MatIconModule,MatCardModule,MatFormFieldModule,MatInputModule,MatListModule} from  '@angular/material';
+import {MatButtonModule,MatRadioModule,MatSliderModule,MatToolbarModule,MatIconModule,MatCardModule,MatFormFieldModule,MatInputModule,MatListModule} from  '@angular/material';
  
 @NgModule({
-    imports: [MatIconModule,MatButtonModule, MatToolbarModule,FormsModule, MatCardModule,MatFormFieldModule,MatInputModule,MatListModule,],
+    imports: [MatIconModule,MatRadioModule,MatSliderModule,MatButtonModule, MatToolbarModule,FormsModule, MatCardModule,MatFormFieldModule,MatInputModule,MatListModule],
      
-    exports: [FormsModule,MatIconModule,MatButtonModule,MatToolbarModule, MatCardModule,MatFormFieldModule,MatInputModule,],
+    exports: [FormsModule,MatRadioModule,MatIconModule,MatButtonModule,MatToolbarModule, MatCardModule,MatFormFieldModule,MatInputModule],
      
     })
     

@@ -1,53 +1,44 @@
-.firstcard{
-  height: 100%;
-  width: 90%;
+mat-card{
+  height:70%;
+  width:70%;
+  margin-right:15%;
   margin-left:5%;
-  margin-right: 5%; 
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  margin-top:2%;
+  margin-bottom:5%;
+  /* margin-top:3%; */
+  border: darkblue;
+  position: relative;
+  }
 
+.details{
+  margin-left:50%;
+  margin-top:-7%;
+  height:50%;
+width: 80%;
+margin-bottom: 40%;
+position: fixed;
 }
-/* .cardlist{
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  } */
 
-  .my-card{
-      /* min-height: 45%; */
-      /* height:40%;
-      width:120%;
+.picture
+{
+height:-10%;
+width:-50%;
+margin-top:3%;
+margin-left:10%;
+image-resolution:-100%;
+}
+.card1{
+ 
+  width: 90%;
+height: 60%;
+}
 
-      margin-left:5%;
-      margin-right:25%;
-      margin-bottom: 2%;
-      margin-top:1%; */
-      height:42%;
-      /* min-width:50%; */
-      width: 150%;
-      margin-left:5%;
-      margin-right:5%;
-      margin-bottom:6%;
-      margin-top:3%;
-      border: darkblue;
-      /* position: relative; */
-      }
-  
-  .picture
-  {
-    height:10%;
-    width:20%;
-    /* left:20%; */
-    margin-top:5%;
-    margin-left: 20%;
-    image-resolution: 25%;
-  }
-
-  .content{
-    font: 1em sans-serif;
-    left:40%;
-    
-  }
+.card{
+  width:50%;
+  height: 30%;
+}
+.mat{
+  width:-50%;
+  height: 590%;
+  image-resolution: -80%;
+}

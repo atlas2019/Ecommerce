@@ -2,8 +2,8 @@ import { Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs/Rx';
 import { HttpClient } from '@angular/common/http';
 import { Router } from "@angular/router";
-//import simple2 from 'src/assets/simple2.json'
 import { user } from '../user.service';
+
 @Component({
   selector: 'project-root',
   templateUrl: './project.component.html',
@@ -12,12 +12,11 @@ import { user } from '../user.service';
 })
 export class projectComponent implements OnInit 
  {  
-  show :boolean;
+  show :boolean;    //initisalising value to pass the value to product description  
   result:any;
-  data:any=[];
-  productdisplay:any=[];
-  ret: any;
-  productres: any;
+  data:any={};
+  productdisplay:any=[];  //calls api and displays the product details
+  productres: any;        //stores the response value
 
  constructor(private http: HttpClient,private router: Router,private api:user)
   {}
@@ -26,13 +25,15 @@ export class projectComponent implements OnInit
     this.show=true;
     console.log("In Product Component");
     this.api.authenticate(this.data).subscribe(data=>{
-        this.ret=data;
-        console.log(this.ret);
+        this.productres=data;
+        console.log(this.productres);
+       // console.log("in productlanding")
       });
    }
 
-foo(x){
+   // exceutes on, click() which then routes to product description page
+product(x){
   this.show=false;
-  this.result=x;
+  this.result=x;    
 }
 }

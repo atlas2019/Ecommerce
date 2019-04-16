@@ -3,17 +3,18 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
+  
 }
 mat-card{
-    min-height: 50%;
-    height:50%;
+   
+    height:40%;
     width:50%;
     margin-left:5%;
-    margin-right:15%;
+    margin-right:40%;
     margin-bottom: 5%;
     margin-top:3%;
     border: darkblue;
-    position: relative;
+   
     }
 
 .picture

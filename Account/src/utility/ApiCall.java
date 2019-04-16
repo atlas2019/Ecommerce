@@ -12,6 +12,7 @@ import javax.ws.rs.core.MediaType;
 
 import cart.CartOperation;
 import cart.Cartitems;
+import common.Product;
 import order.Order;
 import order.OrderHandlerImpl;
 import user.UserLogin;
@@ -37,6 +38,22 @@ public int insertStudent(String data) {
 	}
 	return result;
 }
+@Path("/createReg")
+@POST
+@Consumes(MediaType.APPLICATION_JSON)
+@Produces(MediaType.APPLICATION_JSON)
+
+public int insert(String data) {
+	int result=0;
+	UserManger op=new UserManger();
+	try {
+		result= op.create(data);
+	} catch (JSONException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	return result;
+}
 @Path("/createproduct")
 @POST
 @Consumes(MediaType.APPLICATION_JSON)
@@ -47,9 +64,10 @@ public int insertproduct(String data) {
 	ProductOperation op=new ProductOperation();
 	try {
 		result= op.create(data);
-	} catch (JSONException e) {
-		// TODO Auto-generated catch block
+		} catch (JSONException e) {
+// TODO Auto-generated catch block
 		e.printStackTrace();
+	
 	}
 	return result;
 }
@@ -74,9 +92,9 @@ public int updateStudent(String data) {
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 
-public List<UserRegistration>	retrieveEcommerce(String data) {
+public String retrieveEcommerce(String data) {
 	UserManger op=new UserManger();
-	List<UserRegistration> result=null;
+	String result=null;
 	try {
 		result=op.retrieve(data);
 	}

@@ -4,7 +4,8 @@ import { Component, OnInit } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { HttpClient } from '@angular/common/http';
 import {Observable} from 'rxjs/Rx';
-import corder from 'src/assets/corder.json'
+import corder from 'src/assets/corder.json';
+// import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {CROrder} from 'src/CROrder.service';
 import { Router } from '@angular/router';
 import { FetchCall } from '../Fetchcall.service';
@@ -18,6 +19,8 @@ import { FetchCall } from '../Fetchcall.service';
   providers: [HttpClient,CROrder,FetchCall]
 })
 export class checkoutComponent implements OnInit {
+  // firstFormGroup: FormGroup;
+  // secondFormGroup: FormGroup;
   data:any={};
   createorder:any={};  //creates the order for particular user 
   orderres: any;       //stores respone of order created
@@ -38,15 +41,21 @@ export class checkoutComponent implements OnInit {
   
   //loads the fetchcart,which is to display the elements in oder summary 
     ngOnInit() {
-      // console.log("In Checkout Component");
       this.cartdisplay={
-        "userid":Number(localStorage.getItem("userid"))
-     };
+        //"userid":Number(localStorage.getItem("userid"))
+     "token":Number(localStorage.getItem("token"))
+      };
       this.xj.authenticate(this.cartdisplay).subscribe(data=>{
         this.cartres=data;
         this.cartres=this.cartres;
          console.log(this.cartres);
         });
+        // this.firstFormGroup = this._formBuilder.group({
+        //   firstCtrl: ['', Validators.required]
+        // });
+        // this.secondFormGroup = this._formBuilder.group({
+        //   secondCtrl: ['', Validators.required]
+        // });
      
     }
 
@@ -61,7 +70,8 @@ this.num++;
 
      // console.log(this.Name);
       this.createorder={
-         "userid":Number(localStorage.getItem("userid")),
+       //  "userid":Number(localStorage.getItem("userid")),
+       "token":Number(localStorage.getItem("token")),
          "product":this.product,
          "address":{
                     "name":this.Name,

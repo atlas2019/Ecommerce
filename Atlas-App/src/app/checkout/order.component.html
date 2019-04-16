@@ -1,29 +1,74 @@
 
-<label>MY ACCOUNT> MY ORDERS</label>
+<!-- <label>MY ACCOUNT> MY ORDERS</label> -->
 <!-- <div class="cardlist" fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start"> -->
 <!-- <mat-card class="firstcard" [class.mat-elevation-z15]="!isActive"> -->
-
-    <div class="cardlist" fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
-            <div *ngFor="let obj of ret">
-        <mat-card class="my-card" [class.mat-elevation-z15]="!isActive">
-
-            <mat-card-header>
-                <mat-card-title>My Orders ID: 1</mat-card-title>
-            </mat-card-header>
-
-            
+         <!-- <div> -->
+                <mat-card  [class.mat-elevation-z18]="!isActive" >
+                        <div class="text" [style.overflow]="'auto'" [style.height.px]="'500'">
+                 <mat-card-header class="mat-h1">
+                        <label>My Order:</label>
+                </mat-card-header>
+                <div class="mat">
+                <mat-grid-list cols="2"> 
+                    <div *ngFor="let obj of ret">
+                    <mat-card [class.mat-elevation-z10]="!isActive"   >
+                            <mat-card-content>
+                                    <div class="card1" *ngFor="let obj1 of obj.product">
+                    
                     <div class="picture">
-                        <img mat-card-image src="{{obj.product[0].img}}" alt="" layout=fill>
-                    </div>
-                    <mat-card-content class="content">
+                    
+                                        <img mat-card-image src="{{obj1.img}}" alt="" layout=fill>
+                                    </div>
+                                        <mat-card-content >
+                                             <p><label></label></p> 
+                                            <label><b>Summary:</b></label>
+                                            <p><label><b>Model Name:</b></label>{{obj1.modelname}}</p>
+                                            <p><label><b>Price:</b></label>{{obj1.mobileprice}}</p>
+                                            <p>Delivered On 19-04-2019</p>
+                                            <button>Write product review</button>
+                                        </mat-card-content>
+                                    </div>
+                                    </mat-card-content>
+                                    </mat-card>
+                                    </div>
+                                    </mat-grid-list>
+                                    </div>
+                                </div>
+                                </mat-card> 
+        <!-- </div>  -->
+
+ -->
+
+
+
+
+
+
+<!-- <div class="cardlist" fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
+    <div *ngFor="let obj of ret">
+        <mat-card  [class.mat-elevation-z15]="!isActive">
+
+           
+            <mat-card-content>
+                <mat-card *ngFor="let obj1 of obj.product" [class.mat-elevation-z15]="!isActive">
+
+
+
+                    <img mat-card-image src="{{obj1.img}}" alt="" layout=fill>
+
+                    <mat-card-content >
                         <label><b>Summary:</b></label>
-                         <p><label><b>Model Name:</b></label>{{obj.product[0].modelname}}</p>            
-                        <p><label><b>Price:</b></label>{{obj.product[0].mobileprice}}</p>
+                        <p><label><b>Model Name:</b></label>{{obj1.modelname}}</p>
+                        <p><label><b>Price:</b></label>{{obj1.mobileprice}}</p>
                         <p>Delivered On 19-04-2019</p>
-                       <button>Write product review</button>
+                        <button>Write product review</button>
+                    </mat-card-content>
+
+                </mat-card>
             </mat-card-content>
-        </mat-card>
-    </div>
+    </mat-card>
 </div>
+</div> -->
+
 <!-- </mat-card>
 </div> -->

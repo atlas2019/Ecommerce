@@ -1,7 +1,7 @@
 package order;
 import java.util.List;
 
-import utility.Product;
+import common.Product;
 
 /**
  * @author Akshata
